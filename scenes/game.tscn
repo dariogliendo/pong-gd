@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://4ipqegmok4ho"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_mobd2"]
+[ext_resource type="PackedScene" uid="uid://yq5ic7s84466" path="res://scenes/paleta.tscn" id="2_p6acn"]
+[ext_resource type="PackedScene" uid="uid://cecvybxk8awjj" path="res://scenes/pelota.tscn" id="3_5iwo6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_mobd2")
+
+[node name="Player1" parent="." instance=ExtResource("2_p6acn")]
+position = Vector2(579, 631)
+player = 1
+
+[node name="Player2" parent="." instance=ExtResource("2_p6acn")]
+position = Vector2(560, 20)
+player = 2
+
+[node name="Fondo" type="Sprite2D" parent="."]
+
+[node name="Pelota" parent="." instance=ExtResource("3_5iwo6")]
+position = Vector2(572, 274)
